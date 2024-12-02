@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Track - ET Passport</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Hello There
+    <header>
+        <div class="logo">ET Passport</div>
+        <nav>
+            <ul>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="track.html" class="active">Track</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-section">
+        <h1>Track Your Application</h1>
+        <form action="#" method="GET" class="form-container">
+            <label for="applicationId">Application ID</label>
+            <input type="text" id="applicationId" name="applicationId" placeholder="Enter your application ID" required>
+
+            <button type="submit">Track</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ET Passport. All rights reserved.</p>
+    </footer>
 </body>
 </html>
