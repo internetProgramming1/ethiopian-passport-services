@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #eaf4f9;
+    color: #333;
+}
+/* For the header */
+.navigation{
+    background-color: #005f99;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.navigation ul{
+    display: flex;
+   list-style: none;
+   gap: 30px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.logo{
+    height: 100px;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+}
+
+
+
+/*for the main of the body*/
+.maincont{
+    width: 80%;
+    background-color: #005e991d;
+    margin: 50px auto;
+    padding: 30px;
+    border: 5px solid #005f99;
+    border-radius: 20px;
+}
+.maincont  p{
+    margin: 10px; 
+    display: flex; /* Enables Flexbox */
+    align-items: center; /* Aligns the text and image vertically */
+    gap: 10px;
+}
+.maincont h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.main2{
+    display: flex; 
+}
+
+
+.main3{
+    display: flex;
+    justify-content: space-between;
+}
+.main3 section{
+    margin: 20px;
+    width: 40%;
+    height: 150px;
+    background-color: #005f99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color:white;
+}
+.button{
+    margin: 10px;
+    height: 38px;
+    width: 100px;
+}
+
+
+
+
+/*for the footer*/
+footer{
+    height: 100px;
+    text-align: center;
+    background-color: #333;
+    position: relative;
+    color: #eaf4f9;
+    padding: 20px;
+}
+footer p{
+    position: absolute;
+    bottom: 0;
+   left:40%;
+    
+}
