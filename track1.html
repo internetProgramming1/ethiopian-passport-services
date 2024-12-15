@@ -1,36 +1,54 @@
+<!-- result.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Status - ET Passport</title>
     <link rel="stylesheet" href="track.css">
+    <title>Tracking Result</title>
 </head>
 <body>
     <header>
-        <div class="logo">ET Passport</div>
-        <nav>
+        <nav class="logo">
+            <div>
+                <h3>🟡ET Passport</h3>
+            </div>
+        </nav>
+        <nav class="navigation">
             <ul>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="track.html">Track</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="Passport-App.html">Appointment</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-section">
-        <h1>Application Status</h1>
-        <div class="status-container">
-            <p><strong>Application ID:</strong> <span id="app-id">123456</span></p>
-            <p><strong>Status:</strong> <span id="status">In Progress</span></p>
-            <p><strong>Submission Date:</strong> <span id="date">November 30, 2024</span></p>
-            <p><strong>Estimated Completion:</strong> <span id="completion-date">December 15, 2024</span></p>
+    <main>
+        <div class="tracking-container">
+            <h2>Tracking Result</h2>
+            <div class="result-section">
+                <p>Your Application Number: <span id="displayAppNumber"></span></p>
+                <p>Status: <span class="status">In Progress</span></p>
+                <p>Expected Collection Date: <span class="status">December 30, 2024</span></p>
+            </div>
         </div>
-        <a href="track.html" class="back-link">Back to Track</a>
-    </section>
+    </main>
 
-    <footer class="footer-section">
-        <p>&copy; 2024 ET Passport. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
     </footer>
-</body>
 
+    <script>
+        // Extract the application number from the URL and display it
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const appNumber = urlParams.get('appNumber');
+            if (appNumber) {
+                document.getElementById('displayAppNumber').innerText = appNumber;
+            }
+        }
+    </script>
+</body>
 </html>

@@ -1,34 +1,42 @@
+<!-- First track -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track - ET Passport</title>
     <link rel="stylesheet" href="track.css">
+    <title>Track Passport Application</title>
 </head>
 <body>
     <header>
-        <div class="logo">ET Passport</div>
-        <nav>
+        <nav class="logo">
+            <div>
+                <h3>🟡ET Passport</h3>
+            </div>
+        </nav>
+        <nav class="navigation">
             <ul>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="track.html" class="active">Track</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="Passport-App.html">Appointment</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-section">
-        <h1>Track Your Application</h1>
-        <form action="status.html" method="GET" class="form-container">
-            <label for="applicationId">Application ID</label>
-            <input type="text" id="applicationId" name="applicationId" placeholder="Enter your application ID" required>
+    <main>
+        <div class="tracking-container">
+            <h2>Track Passport Application</h2> 
+            <form action="track1.html" method="get">
+                <input type="text" id="appNumber" name="appNumber" placeholder="Enter Application Number" required>
+                <button class="button" type="submit">Track</button>
+            </form>
+        </div>
+    </main>
 
-            <button type="submit">Track</button>
-        </form>
-    </section>
-
-    <footer class="footer-section">
-        <p>&copy; 2024 ET Passport. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
     </footer>
 </body>
 </html>
