@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Site selection</title>
+</head>
+<body>
+    <header>
+        <nav class="logo">
+            <div>
+                <h3>🟡ET Passport</h3>
+            </div>
+        </nav>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/Appointment/Page1/Passport-App.html">Appointment</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+   <div class="maincont">
+    <aside>
+        <ul>
+            <li>Request Appointment</li>
+            <a href="Site-select.html"><li>Site Selection</li></a>
+            <a href="#"><li>Date and time</li></a>
+            <a href="#"><li>Personal information</li></a>
+            <a href="#"><li>Payement</li></a>
+        </ul>
+
+    </aside>
+
+
+    <main>
+
+        <div class="selection">    
+      <!-- Site Selection -->
+      <label for="site">Site Selection*</label>
+      <select id="site" name="site" required>
+        <option value="" disabled selected>Select Site</option>
+        <option value="addis-ababa">Addis Ababa</option>
+        <option value="bahir-dar">Bahir Dar</option>
+        <option value="hawassa">Hawassa</option>
+        <option value="mekelle">Mekelle</option>
+      </select>
+<br>
+      <!-- City Selection -->
+      <label for="city">City*</label>
+      <select id="city" name="city" required>
+        <option value="" disabled selected>Select city</option>
+        <option value="addis-ababa">Addis Ababa</option>
+        <option value="bahir-dar">Bahir Dar</option>
+        <option value="hawassa">Hawassa</option>
+        <option value="mekelle">Mekelle</option>
+      </select>
+<br>
+    <!-- office Selection -->
+      <label for="office">Office*</label>
+      <select id="office" name="office" required>
+        <option value="" disabled selected>Select Office*</option>
+        <option value="ICS">ICS Main Office</option>
+      </select>
+<br>
+
+      <!-- Delivery Type Selection -->
+      <label for="delivery">Delivery Site*</label>
+      <select id="delivery" name="delivery" required>
+        <option value="" disabled selected>Select delivery type</option>
+        <option value="pickup">Pickup</option>
+        <option value="home-delivery">Home Delivery</option>
+      </select>
+       
+        </div>
+          <div class="submit">
+        <div class="preview">
+    <h2>SITE PREVIEW </h2>
+    </div>
+    <button>Next</button>
+        </div>
+        
+    </main>
+   </div>
+
+   <footer>
+    <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
+    
+        </footer>
+        
+
+
+</body>
+</html>
