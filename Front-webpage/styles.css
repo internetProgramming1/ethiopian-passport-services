@@ -6,7 +6,9 @@
 }
 
 body {
-  
+  font-family: Arial, sans-serif;
+  font-size: large;
+  font-weight: 100;
 }
 
 .navbar1 {
