@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback and Complaints</title>
+    <link rel="stylesheet" href="stl.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="dot"></span>
+            <h1>ET Passport</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Appointment</a>
+            <a href="#">Status</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="feedback-section">
+            <h2>Request Feedback or Lodge a Complaint</h2>
+            <div class="instructions">
+                <p>Your feedback helps us improve our services. Please complete the form below.</p>
+            </div>
+
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Name (Optional):</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email (Required):</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional):</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback-type">Type of Feedback:</label>
+                    <select id="feedback-type" name="feedback-type">
+                        <option value="general">General Feedback</option>
+                        <option value="complaint">Complaint</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="5" placeholder="Describe your experience or issue" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment">Attachment (Optional):</label>
+                    <input type="file" id="attachment" name="attachment">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="confirmation-message" class="hidden">
+                <p>Thank you for your submission. Your tracking ID is: <strong id="tracking-id"></strong></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const trackingId = 'FB-' + Math.floor(Math.random() * 1000000);
+            document.getElementById('tracking-id').textContent = trackingId;
+            document.getElementById('confirmation-message').classList.remove('hidden');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
