@@ -29,7 +29,7 @@
         <div class="tracking-container">
             <h2>Tracking Result</h2>
             <div class="result-section">
-                <p>Your Application Number: <span id="displayAppNumber"></span></p>
+                <p>Your Application Number:  XXXXX<span id="displayAppNumber"></span></p>
                 <p>Status: <span class="status">In Progress</span></p>
                 <p>Expected Collection Date: <span class="status">December 30, 2024</span></p>
             </div>
@@ -40,15 +40,5 @@
         <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
     </footer>
 
-    <script>
-        // Extract the application number from the URL and display it
-        window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const appNumber = urlParams.get('appNumber');
-            if (appNumber) {
-                document.getElementById('displayAppNumber').innerText = appNumber;
-            }
-        }
-    </script>
 </body>
 </html>
