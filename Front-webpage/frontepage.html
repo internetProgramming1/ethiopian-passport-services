@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Apply for Ethiopian Passport Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style2.css">
+  <link  rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="styles4.css">
+  <link rel="stylesheet" href="style5.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="style6.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar1">
+  <div class="navdiv">
+    <div>
+      <a href="#"><img class="logo" src="navthumbnail/passport-1.webp" alt="ICS Logo"></a>
+    </div>
+    <ul class="nav-links1">
+      <li><a href="#">evisa</a></li>
+      <li><a href="#">Ethiopian Airlines</a></li>
+      <li><a href="#">Ethiopian Skylight Hotel</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+<nav class="navbar">
+  <div class="navbar-container">
+      <div class="menu-icon" id="menu-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+              <path fill="white" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
+          </svg>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Urgent Appointment</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Passport Appointment</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Requirements</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Passport Status</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+          
+          
+          <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+      
+      </ul>
+  </div>
+</nav>
+<script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<div class="carousel-container">
+  <div class="carousel-slide">
+      <div class="carousel-item active">
+          <img src="picthumbnail/Image1.jpg" alt="Image 1">
+          <div class="carousel-caption">Welcome to Ethiopian Passport Services</div>
+      </div>
+      <div class="carousel-item">
+          <img src="picthumbnail/Image2.jpg" alt="Image 2">
+          <div class="carousel-caption">Welcome to Ethiopian Passport Services</div>
+      </div>
+      <div class="carousel-item">
+          <img src="picthumbnail/Image3.jpg" alt="Image 3">
+          <div class="carousel-caption">Welcome to Ethiopian Passport Services</div>
+      </div>
+      <div class="carousel-item">
+          <img src="picthumbnail/Image4.jpg" alt="Image 4">
+          <div class="carousel-caption">Welcome to Ethiopian Passport Services</div>
+      </div>
+      <div class="carousel-item">
+          <img src="picthumbnail/Image5.jpg" alt="Image 5">
+          <div class="carousel-caption">Welcome to Ethiopian Passport Services</div>
+      </div>
+      <div class="carousel-item">
+          <img src="picthumbnail/Image6.jpg" alt="Image 6">
+          <div class="carousel-caption">Welcome to Ethiopian Passport Services</div>
+      </div>
+  </div>
+
+ <div class="carousel-controls">
+            <button id="prevBtn">&lt;</button>
+            <button id="nextBtn">&gt;</button>
+        </div>
+
+  <div class="carousel-indicators">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+  </div>
+</div>
+
+<!-- Include the JavaScript file -->
+<!-- <script src="script.js"></script> -->
+
+
+
+<script>
+ 
+ const carouselItems = document.querySelectorAll('.carousel-item');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+let autoSlideInterval;
+
+function showSlide(index) {
+    carouselItems.forEach((item, i) => {
+        item.classList.remove('active');
+        dots[i].classList.remove('active');
+    });
+    carouselItems[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    showSlide(currentIndex);
+}
+
+function autoScroll() {
+    autoSlideInterval = setInterval(nextSlide, 3000);
+}
+
+function resetAutoScroll() {
+    clearInterval(autoSlideInterval);
+    autoScroll();
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        showSlide(index);
+        resetAutoScroll();
+    });
+});
+
+prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoScroll();
+});
+
+nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoScroll();
+});
+
+window.onload = autoScroll;
+
+</script>
+
+
+
+<div class="container-section">
+
+ <div class="container-item start-application">
+       <img class="image" src="picthumbnail/new passport 1-01.fb0e7fca (1).svg">
+      <a href="start-application.html"><h2>Start New Application</h2></a>
+      <p>Do you want to secure Ethiopian Passport now? Provide all requested information and apply.</p>
+    </div>
+    
+    <div class="container-item register">
+      <img  class="image" src="picthumbnail/register -01.b2b6338d.svg">
+      <a href="register.html"><h2>REGISTER</h2></a>
+      <p>Are you planning to be a frequent Passport user? Register and let us remember you so that you won’t have to fill application forms from scratch every time. This is optional.</p>
+    </div>
+
+  <div class="container-item check-status">
+    <img  class="image"  src="picthumbnail/register -01.b2b6338d.svg">
+      <a href="check-status.html"><h2>Check Status</h2></a>
+      <p>What is the status of my Ethiopian Passport request? Provide all requested tracking information and check now.</p>
+
+  </div>
+
+</div>
+
+
+
+
+ <section class="before-apply">
+  <div class="image-container">
+      <img src="picc2/INVEA_How_to_apply.048c4bfb.jpg" alt="Image Description">
+  </div>
+  <div class="text-container">
+      <h2>BEFORE YOU APPLY</h2>
+      <ul>
+          <li>All applicants should secure an online appointment when applying for a passport</li>
+          <li>Confirmed appointment is required</li>
+          <li>Applicants are reminded to be on site not earlier than 30 minutes on their selected date and time of appointment at their chosen consular office.</li>
+          <li>Personal appearance is required for new applicants.</li>
+          <li>Please be warned that dealing with fixers (illegal arrangements) is at your own risk and expense.</li>
+          <li>Prepare all the originals and photocopies of the documentary requirements for passport application.</li>
+      </ul>
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>About Passport Service</h3>
+          <ul>
+              <li><a href="#">Requirements</a></li>
+              <li><a href="#">Schedule an Appointment</a></li>
+              <li><a href="#">Status</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p class="contact-info"><span class="white-icon">📍</span> Addis Ababa, Ethiopia</p>
+          <p class="contact-info"><span class="white-icon">📞</span> 8133 FREE CALL</p>
+          <p class="contact-info">✉️ <a href="mailto:support@ethiopianpassportservices.gov.et" class="contact-link">support@ethiopianpassportservices.gov.et</a></p>
+      </div>
+      <div class="footer-section">
+          <h3>Help and Support</h3>
+          <ul>
+              <li><a href="#">FAQ</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-icons">
+      <img src="picc2/download.png" alt="CBE Birr">
+      <img src="picc2/download (2).png" alt="Amole">
+      <img src="picc2/download (1).png" alt="POS">
+      <img src="picc2/download.jpg" alt="Bank of Abyssinia">
+  </div>
+  <div class="footer-bottom">
+      <p>© 2024 Copyright: Immigration And Citizenship Service</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
