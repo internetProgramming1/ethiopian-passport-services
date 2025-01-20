@@ -1,35 +1,50 @@
 *{
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
 }
 body{
     font-family: Arial, sans-serif;
     background-color: #eaf4f9;
     color: #333;
 }
-/* For the header */
+
+/*For Header */
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: 20px 50px;
+}
 .navigation{
     background-color: #005f99;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-}
-.navigation ul{
-    display: flex;
-   list-style: none;
-   gap: 30px;
-}
-a{
-    color: #fff;
-    text-decoration: none;
-}
-.logo{
     height: 100px;
-    align-items: center;
+    margin-bottom: 0px;
+}
+.navigation ul, .logo ul{
     display: flex;
-    padding-left: 20px;
+    list-style: none;
+    gap: 90px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.navigation ul li a,.main3 a{
+ color: #eaf4f9;
+ text-decoration: none;
+}
+.logo ul li a{
+    text-decoration: none;
+    color:#005f99;
 }
 
 /*for the main */
@@ -37,18 +52,20 @@ a{
 .mainccont{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin: 50px 0;
-    gap: 100px;
+    gap: 200px;
 
 }
+
 .type div{
     display: flex;
     margin: 20px;
+    
 }
 .type a{
     color: #333;
+    text-decoration: none;
 }
 .left{
     display: flex;
@@ -72,16 +89,18 @@ a{
 
 
 .side{
+    display: flex;
+    flex-direction: column;
     border: solid  #005f99 3px;
-    height: 100px;
-    width: 300px;
+    height: 150px;
+    width: 350px;
     padding: 10px;
     margin: 20px;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
 }
-.side p{
-    margin-left: 10px;
-   
-}
+
 
 /*for the footer*/
 footer{

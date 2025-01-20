@@ -1,4 +1,5 @@
 *{
+    box-sizing: border-box;
     margin: 0;
 }
 body{
@@ -6,30 +7,47 @@ body{
     background-color: #eaf4f9;
     color: #333;
 }
-/* For the header */
+
+/*For Header */
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: 20px 50px;
+}
 .navigation{
     background-color: #005f99;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-}
-.navigation ul{
-    display: flex;
-   list-style: none;
-   gap: 30px;
-}
-a{
-    color: #fff;
-    text-decoration: none;
-}
-.logo{
     height: 100px;
-    align-items: center;
-    display: flex;
-    padding-left: 20px;
+    margin-bottom: 0px;
 }
+.navigation ul, .logo ul{
+    display: flex;
+    list-style: none;
+    gap: 90px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.navigation ul li a, .main3 a{
+ color: #eaf4f9;
+ text-decoration: none;
+}
+.logo ul li a{
+    text-decoration: none;
+    color:#005f99;
+}
+
 
 /* for the main div */
 .maincont{
@@ -38,22 +56,25 @@ a{
     gap: 10px;
 }
 aside{
-    flex: 1;
+    flex: 0.75;
     background-color:  #005e991d;
     height: 500px;
 }
 aside ul{
     padding: 40px;
 }
-aside li{
+aside li {
     padding: 20px;
     list-style: none;
     font-size: 20px;
     font-weight: bolder;
-
+}
+aside a{
+   text-decoration: none;
+   color: #333;
 }
 main{
-    flex: 3;
+    flex: 3.25;
     background-color:#005e991d;
     display: flex;
     justify-content: center;
@@ -107,4 +128,8 @@ footer p{
     bottom: 0;
    left:40%;
     
+}
+
+a:hover{
+    text-decoration: underline;
 }
