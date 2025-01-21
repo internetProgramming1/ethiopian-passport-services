@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="Ethiopian_National_Anthem(360p).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="player-container">
+        <div class="album-art"></div>
+        <hr style="padding: 5px; list-style: disc;">
+        <h1>Ethiopian National Anthem</h1>
+        <p>Ethiopian</p>
+        <div class="controls">
+            <button class="play-button" id="playPauseButton">▶️</button>
+        </div>
+        <audio id="audioPlayer" src="Ethiopian_National_Anthem(256k).mp3"></audio>
+    </div>
+
+    <script>
+        const playPauseButton = document.getElementById('playPauseButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        let isPlaying = false;
+
+        playPauseButton.addEventListener('click', () => {
+            if (isPlaying) {
+                audioPlayer.pause();
+                playPauseButton.textContent = '▶️';
+            } else {
+                audioPlayer.play();
+                playPauseButton.textContent = '⏸️';
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+</html>
