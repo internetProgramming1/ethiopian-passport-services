@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleP.css">
+    <link rel="stylesheet" href="navstyle.css">
+    <title>Attachments</title>
+</head>
+<body>
+  <header>
+    <nav class="logo">
+        <h3>
+            <img src="Images/passport-1.webp" style="width: 550px; height:100px" alt="logo">
+        </h3>
+        <ul class="otherUl">
+            <li><a href="#">evisa</a></li>
+            <li><a href="#">ENS</a></li>
+        </ul>
+
+    </nav>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="Passport-App.html">Appointment</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </nav>
+</header>
+
+   <div class="maincont">
+    <aside>
+        <ul style="padding: 50px 0;"> 
+            <a href="/AppUrgent/page1/Page3/type.html"><li>Urgent Appointment</li></a>
+            <a href="/AppUrgent/page1/daytype.html"><li >Urgency Type</li></a>
+            <a href="/AppUrgent/page1/Page2/Site-select.html" ><li>Site Selection</li></a>
+            <a href="DateTime.html" ><li style="background-color: #005f99; color: #eaf4f9;">Date and time</li></a>
+            <a href="/AppUrgent/Page5/personalInfo.html"><li>Personal information</li></a>
+            <a href="/AppUrgent/Page6/payment.html"><li>Payement</li></a>
+        </ul>
+
+    </aside>
+
+<main>
+
+    <nav>
+        <ul class="nav-links">
+           <span style="background-color: #005f99; padding: 7px; border-radius: 5px; color: #f9f3ea;"> <li ><a href="personalInfo.html">Personal Info.</a></li></span>
+            <li class="center"><a href="address.html">Address</a></li>
+            <li class="upward"><a href="familiy.html">Family</a></li>
+            <li class="forward"><a href="attachment.html">Attachments</a></li>
+          </ul>
+    </nav>
+
+    <div class="form-container">
+        <form action="#" method="POST">
+
+            <label for="firstname">First Name*<br>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+        </label>
+            <label for="middlename">Middle Name*<br>
+            <input type="text" id="middlename" name="middlename" placeholder="Enter your middle name" required>
+        </label>
+            <label for="lastname">Last Name*<br>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+<br></label>
+            <label for="phone">Phone Number*<br>
+            <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" required>
+        </label>
+            <label for="email">Email*<br>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </label>
+
+        <label for="gender">Gender*<br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male" style="display: inline;">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female" style="display: inline;">Female</label>
+        </label>
+
+        <label for="dob">Date of Birth*<br>
+            <input type="date" id="dob" name="dob" required placeholder="YYYY-MM-DD" required>
+            </label>
+
+            <label>Are you under 18?*<br>
+                <input type="radio" id="under18-yes" name="under18" value="yes" required>
+                <label for="under18-yes" style="display: inline;">Yes</label>
+                <input type="radio" id="under18-no" name="under18" value="no" required>
+                <label for="under18-no" style="display: inline;">No</label>
+            </label>
+
+            <label for="birthplace">Birthplace*<br>
+                <input type="text" id="birthplace" name="birthplace" placeholder="Enter your birthplace" required>
+                </label>
+
+                <label>Are you adopted?*<br>
+                    <input type="radio" id="adopted-yes" name="adopted" value="yes" required>
+                    <label for="adopted-yes" style="display: inline;">Yes</label>
+                    <input type="radio" id="adopted-no" name="adopted" value="no" required>
+                    <label for="adopted-no" style="display: inline;">No</label>
+                </label>
+
+                <label for="birth_certificate">Birth Certificate Unique ID*<br>
+                    <input type="text" id="birth_certificate" name="birth_certificate" placeholder="Enter your birth certificate unique ID" required>
+                    </label>
+
+                    
+            <label for="nationality">Nationality*<br>
+                <select id="nationality" name="nationality" required>
+                    <option value="ethiopia" selected>Ethiopia</option>
+                </select>
+                </label>
+
+            <label for="marital-status">Marital Status*<br>
+            <select id="marital-status" name="marital_status" required>
+                <option value="" disabled selected>Select your marital status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select>
+        </label>  
+        
+        <label for="occupation">Occupation<br>
+            <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation" >
+        </label>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</main>
+
+</div>
+   <footer>
+    <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>  
+        </footer>
+
+        <script>
+            document.getElementById("personalInfoForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission
+    
+                // Collect data from the form
+                const data = {
+                    firstname: document.getElementById("firstname").value,
+                    middlename: document.getElementById("middlename").value,
+                    lastname: document.getElementById("lastname").value,
+                    phone: document.getElementById("phone").value,
+                    email: document.getElementById("email").value,
+                    gender: document.querySelector('input[name="gender"]:checked').value,
+                    dob: document.getElementById("dob").value,
+                    under18: document.querySelector('input[name="under18"]:checked').value,
+                    birthplace: document.getElementById("birthplace").value,
+                    adopted: document.querySelector('input[name="adopted"]:checked').value,
+                    birthCertificate: document.getElementById("birth_certificate").value,
+                    nationality: document.getElementById("nationality").value,
+                    maritalStatus: document.getElementById("marital-status").value,
+                    occupation: document.getElementById("occupation").value || "Not specified",
+                };
+    
+                // Save the data in localStorage
+                for (const [key, value] of Object.entries(data)) {
+                    localStorage.setItem(key, value);
+                }
+    
+                // Redirect to the summary page
+                window.location.href = "summary.html";
+            });
+        </script>
+</body>
+</html>

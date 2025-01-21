@@ -1,0 +1,58 @@
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+form{
+    margin-left: 10%;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+input[type="date"] ,input[type="text"],input[type="tel"],input[type="email"]{
+    height: 45px;
+    margin: 5px;
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+input[type="radio"]{
+    margin: 5px;
+   margin-top: 20px;
+}
+select {
+    height: 45px;
+    margin: 5px;
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+button{ 
+    align-self: center; /* Aligns content to the bottom vertically */
+    justify-self: center;
+    height: 30px;
+    width: 50px;
+    
+}
+
+input:hover,
+select:hover {
+    border-color: #005f99;
+}
+input:focus,
+select:focus {
+    border-color: #005f99;
+    outline: none;
+}
+
