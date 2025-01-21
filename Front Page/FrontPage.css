@@ -337,6 +337,21 @@ body {
   background-color: #007bff;
 }
 
+@media (max-width: 768px) {
+  .carousel-track {
+    transform: translateX(0); /* Ensure correct positioning */
+  }
+
+  .carousel-group {
+    flex-wrap: nowrap;
+    flex: 0 0 100%; /* Ensure the group takes the full width */
+  }
+
+  .card {
+    flex: 0 0 100%; /* Show only one card at a time */
+    max-width: 100%; /* Ensure the card spans the full width */
+  }
+}
 
 /* Feature Section */
 .features {
