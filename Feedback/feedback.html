@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feedback.css">
+    <title>Type</title>
+</head>
+<body>
+    <header>
+        <nav class="logo">
+            <h3>
+                <img src="Images/passport-1.webp" style="width: 550px; height:100px" alt="logo">
+            </h3>
+            <ul class="otherUl">
+                <li><a href="#">evisa</a></li>
+                <li><a href="#">ENS</a></li>
+            </ul>
+
+        </nav>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="Passport-App.html">Appointment</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="feedback-main">
+        <h1>Feedback and Complaints</h1>
+        <p>Please provide your feedback or lodge a complaint about our services. We value your input to improve our service?</p>
+        
+        <form action="#" method="POST" class="feedback-form">
+            <label for="name"><br>Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="complaint-type">Complaint Type:</label>
+            <select id="complaint-type" name="complaint-type" required>
+                <option value="service">Service Quality</option>
+                <option value="support">Customer Support</option>
+                <option value="technical">Technical Issue</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="message">Your Feedback or Complaint:</label><br>
+            <textarea id="message" name="message" rows="6" required></textarea><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div class="acknowledgment">
+            <h2>Acknowledgment</h2>
+            <p>Your complaint has been received. You will be contacted shortly with an update.</p>
+            <p>Tracking ID: <span id="tracking-id">#12345</span></p>
+        </div>
+    </main>
+
+     
+    <footer>
+        <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
+        
+            </footer>
+            
+    
+    
+    </body>
+    </html>

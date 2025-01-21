@@ -1,0 +1,136 @@
+/* General Layout */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #eaf4f9;
+    color: #333;
+}
+
+/*For Header */
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin: 20px 50px;
+}
+.navigation{
+    background-color: #005f99;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 0px;
+}
+.navigation ul, .logo ul{
+    display: flex;
+    list-style: none;
+    gap: 90px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.navigation ul li a,.main3 a{
+ color: #eaf4f9;
+ text-decoration: none;
+}
+.logo ul li a{
+    text-decoration: none;
+    color:#005f99;
+}
+
+/* Main Content */
+.feedback-main {
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-main h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #005f99;
+    margin-bottom: 20px;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feedback-form label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.feedback-form input, .feedback-form select, .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-form button {
+    padding: 10px 20px;
+    background-color: #005f99;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #003366;
+}
+
+/* Acknowledgment Section */
+.acknowledgment {
+    background-color: #eaf4f9;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.acknowledgment h2 {
+    font-size: 20px;
+    color: #005f99;
+    margin-bottom: 10px;
+}
+
+.acknowledgment p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+footer{
+    height: 100px;
+    text-align: center;
+    background-color: #333;
+    position: relative;
+    color: #eaf4f9;
+    padding: 20px;
+}
+footer p{
+    position: absolute;
+    bottom: 0;
+   left:40%;
+    
+}
+
