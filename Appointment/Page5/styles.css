@@ -61,7 +61,7 @@ header{
 aside{
     flex: 0.75;
     background-color: #005e991d;
-    height: 500px;
+    height: auto;
 }
 aside ul{
     padding: 40px;

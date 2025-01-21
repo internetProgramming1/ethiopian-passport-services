@@ -22,25 +22,24 @@
     </nav>
     <nav class="navigation">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="Passport-App.html">Appointment</a></li>
-            <li><a href="#">Status</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQs</a></li>
-        </ul>
+            <li><a href="/Front Page/FrontPage.html">Home</a></li>
+            <li><a href="/Appointment/Page1/Passport-App.html">Appointment</a></li>
+            <li><a href="/Track/add-tracking.html">Status</a></li>
+            <li><a href="/Feedback and requirement/About_contact.html">About us &contact</a></li>
+            <li><a href="/FAQ.html">FAQs</a></li>
+       </ul>
     </nav>
 </header>
 
    <div class="maincont">
     <aside>
         <ul style="padding: 50px 0;"> 
-           <a href="/Appointment/Page3/type.html"><li>Request Appointment</li></a>
-           <a href="Site-select.html"><li>Site Selection</li></a>
-            <a href="#"><li>Date and time</li></a>
-            <a href="#"><li  style="background-color: #005f99; color: #eaf4f9;">Personal information</li></a>
-            <a href="#"><li>Payement</li></a>
-        </ul>
+            <a href="/Appointment/Page3/type.html"><li>Request Appointment</li></a>
+            <a href="/Appointment/Page2/Site-select.html"><li>Site Selection</li></a>
+             <a href="/Appointment/Page4/DateTime.html"><li>Date and time</li></a>
+             <a href="personalInfo.html"><li  style="background-color: #005f99; color: #eaf4f9;">Personal information</li></a>
+             <a href="/Appointment/Page6/"><li>Payement</li></a>
+         </ul>
 
     </aside>
 
@@ -78,8 +77,8 @@
                     <label for="id_back">Upload ID Back* </label>
                     <input type="file" id="id_back" name="id_back" accept=".jpg,.jpeg,.png" required>
                 </div>
-            </form>
         </div>
+
         <div class="preview" style="position: relative;">
             <div class="note">
                 <h4>Note Info:</h4>
@@ -88,10 +87,9 @@
                     <li>Only clear,A4 color photocopies of your supporting document will be accepted.</li>
                     <li>Application should present all original document on scheduled date and time of the appointment.</li>
                 </ul>
-
             </div>
-            <button type="submit" style="position: absolute; bottom: 0;right: 40px;">Next</button>
-        </div>      
+            <button style="margin: 100px 50px;">Next</button>
+            </div>      
     </div>
         
 </main>
@@ -100,5 +98,59 @@
    <footer>
     <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>  
         </footer>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const form = document.querySelector("form");
+                const submitButton = form.querySelector("button[type='submit']");
+                const requiredFileInputs = form.querySelectorAll("input[type='file'][required]");
+        
+                // Disable the button initially
+                submitButton.disabled = true;
+        
+                // Check all required file inputs
+                const validateFiles = () => {
+                    let allValid = true;
+        
+                    requiredFileInputs.forEach(fileInput => {
+                        if (!fileInput.files.length) {
+                            allValid = false;
+                        }
+                    });
+        
+                    submitButton.disabled = !allValid;
+                };
+        
+                // Add event listeners to required file inputs
+                requiredFileInputs.forEach(fileInput => {
+                    fileInput.addEventListener("change", () => {
+                        if (fileInput.files.length) {
+                            fileInput.style.border = ""; // Reset border if a file is selected
+                        } else {
+                            fileInput.style.border = "2px solid red"; // Add red border if empty
+                        }
+                        validateFiles();
+                    });
+                });
+        
+                // Handle form submission
+                form.addEventListener("submit", (e) => {
+                    let allValid = true;
+        
+                    requiredFileInputs.forEach(fileInput => {
+                        if (!fileInput.files.length) {
+                            allValid = false;
+                            fileInput.style.border = "2px solid red"; // Add red border to invalid inputs
+                        }
+                    });
+        
+                    if (!allValid) {
+                        e.preventDefault(); // Prevent form submission
+                        alert("Please upload all required documents before proceeding."); // Popup alert
+                    }
+                });
+            });
+        </script>
+        
 </body>
 </html>

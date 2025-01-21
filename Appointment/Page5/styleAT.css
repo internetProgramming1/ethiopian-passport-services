@@ -53,10 +53,12 @@ button{
     height: 30px;
     width: 50px;  
 }
+
 input:hover,
 select:hover {
     border-color: #005f99;
 }
+
 input:focus,
 select:focus {
     border-color: #005f99;

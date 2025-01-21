@@ -14,20 +14,19 @@
             <img src="Images/passport-1.webp" style="width: 550px; height:100px" alt="logo">
         </h3>
         <ul class="otherUl">
-            <li><a href="#">evisa</a></li>
-            <li><a href="#">ENS</a></li>
-        </ul>
+          <li><a href="https://www.evisa.gov.et/">evisa</a></li>
+          <li><a href="/ENS/index.html">ENS</a></li>
+       </ul>
 
     </nav>
     <nav class="navigation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="Passport-App.html">Appointment</a></li>
-            <li><a href="#">Status</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQs</a></li>
-        </ul>
+      <ul>
+        <li><a href="/Front Page/FrontPage.html">Home</a></li>
+        <li><a href="/Appointment/Page1/Passport-App.html">Appointment</a></li>
+        <li><a href="/Track/add-tracking.html">Status</a></li>
+        <li><a href="/Feedback and requirement/About_contact.html">About us &contact</a></li>
+        <li><a href="/FAQ.html">FAQs</a></li>
+    </ul>
     </nav>
 </header>
 
@@ -37,9 +36,9 @@
         <ul style="padding: 50px 0;"> 
            <a href="/Appointment/Page3/type.html"><li>Request Appointment</li></a>
           <a href="Site-select.html"><li style="background-color: #005f99; color: #eaf4f9;">Site Selection</li></a>
-            <a href="#"><li>Date and time</li></a>
-            <a href="#"><li>Personal information</li></a>
-            <a href="#"><li>Payement</li></a>
+            <a href="/Appointment/Page4/DateTime.html"><li>Date and time</li></a>
+            <a href="/Appointment/Page5/personalInfo.html"><li>Personal information</li></a>
+            <a href="/Appointment/Page6/payment.html"><li>Payement</li></a>
         </ul>
 
     </aside>
@@ -47,53 +46,77 @@
 
     <main>
 
-        <div class="selection">    
-      <!-- Site Selection -->
-      <label for="site">Site Selection*</label>
-      <select id="site" name="site" required>
-        <option value="" disabled selected>Select Site</option>
-        <option value="addis-ababa">Addis Ababa</option>
-        <option value="bahir-dar">Bahir Dar</option>
-        <option value="hawassa">Hawassa</option>
-        <option value="mekelle">Mekelle</option>
-      </select>
-<br>
-      <!-- City Selection -->
-      <label for="city">City*</label>
-      <select id="city" name="city" required>
-        <option value="" disabled selected>Select city</option>
-        <option value="addis-ababa">Addis Ababa</option>
-        <option value="bahir-dar">Bahir Dar</option>
-        <option value="hawassa">Hawassa</option>
-        <option value="mekelle">Mekelle</option>
-      </select>
-<br>
-    <!-- office Selection -->
-      <label for="office">Office*</label>
-      <select id="office" name="office" required>
-        <option value="" disabled selected>Select Office*</option>
-        <option value="ICS">ICS Main Office</option>
-      </select>
-<br>
-
-      <!-- Delivery Type Selection -->
-      <label for="delivery">Delivery Site*</label>
-      <select id="delivery" name="delivery" required>
-        <option value="" disabled selected>Select delivery site</option>
-        <option value="ICS main Office">ICS Main Office</option>
-        <option value=""></option>
-      </select>
-       
-        </div>
-
-          <div class="submit">
-        <div class="preview">
-    <h2>SITE PREVIEW </h2>
+      <div class="selection">
+        <!-- Site Selection -->
+        <label for="site">Site Selection*</label>
+        <select id="site" name="site" required>
+            <option value="" disabled selected>Select Site</option>
+            <option value="addis-ababa">Addis Ababa</option>
+            <option value="bahir-dar">Bahir Dar</option>
+            <option value="hawassa">Hawassa</option>
+            <option value="mekelle">Mekelle</option>
+        </select>
+        <br>
+        <!-- City Selection -->
+        <label for="city">City*</label>
+        <select id="city" name="city" required>
+            <option value="" disabled selected>Select city</option>
+            <option value="addis-ababa">Addis Ababa</option>
+            <option value="bahir-dar">Bahir Dar</option>
+            <option value="hawassa">Hawassa</option>
+            <option value="mekelle">Mekelle</option>
+        </select>
+        <br>
+        <!-- Office Selection -->
+        <label for="office">Office*</label>
+        <select id="office" name="office" required>
+            <option value="" disabled selected>Select Office*</option>
+            <option value="ICS">ICS Main Office</option>
+        </select>
+        <br>
+        <!-- Delivery Type Selection -->
+        <label for="delivery">Delivery Site*</label>
+        <select id="delivery" name="delivery" required>
+            <option value="" disabled selected>Select delivery site</option>
+            <option value="ICS main Office">ICS Main Office</option>
+            <option value=""></option>
+        </select>
     </div>
-    <button>Next</button>
-        </div>   
+
+    <div class="submit">
+        <div class="preview">
+            <h2>SITE PREVIEW </h2>
+        </div>
+        <button id="nextButton">Next</button>
+    </div>
+
+
       </main>
    </div>
+
+   <script>
+    document.getElementById('nextButton').addEventListener('click', function(event) {
+        // Get all required select elements
+        const requiredFields = document.querySelectorAll('select[required]');
+        let allFilled = true;
+
+        // Check if all required fields have a value
+        requiredFields.forEach(field => {
+            if (!field.value) {
+                allFilled = false;
+                field.style.borderColor = 'red'; // Highlight the field
+            } else {
+                field.style.borderColor = ''; // Reset the border color
+            }
+        });
+
+        // Prevent form submission if any field is empty
+        if (!allFilled) {
+            event.preventDefault();
+            alert('Please fill in all required fields before proceeding.');
+        }
+    });
+</script>
 
    <script>
     document.getElementById('next').addEventListener('click', () => {
