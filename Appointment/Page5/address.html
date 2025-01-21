@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleA.css">
+    <title>Personal information</title>
+</head>
+<body>
+  <header>
+    <nav class="logo">
+        <h3>
+            <img src="Images/passport-1.webp" style="width: 550px; height:100px" alt="logo">
+        </h3>
+        <ul class="otherUl">
+            <li><a href="#">evisa</a></li>
+            <li><a href="#">ENS</a></li>
+        </ul>
+
+    </nav>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="Passport-App.html">Appointment</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </nav>
+</header>
+
+   <div class="maincont">
+    <aside>
+        <ul style="padding: 50px 0;"> 
+           <a href="/Appointment/Page3/type.html"><li>Request Appointment</li></a>
+           <a href="Site-select.html"><li>Site Selection</li></a>
+            <a href="#"><li>Date and time</li></a>
+            <a href="#"><li  style="background-color: #005f99; color: #eaf4f9;">Personal information</li></a>
+            <a href="#"><li>Payement</li></a>
+        </ul>
+
+    </aside>
+
+<main>
+    <div class="form-container">
+
+        <form action="#" method="POST">
+            
+            <label for="region">Region* <br>
+            <select id="region" name="region" required>
+                <option value="" disabled selected>Select your region</option>
+                <option value="addis_ababa">Addis Ababa</option>
+                <option value="afar">Afar</option>
+                <option value="amhara">Amhara</option>
+                <option value="benishangul_gumuz">Benishangul-Gumuz</option>
+                <option value="dire_dawa">Dire Dawa</option>
+                <option value="gambela">Gambela</option>
+                <option value="harari">Harari</option>
+                <option value="oromia">Oromia</option>
+                <option value="sidama">Sidama</option>
+                <option value="somali">Somali</option>
+                <option value="southern_nations">Southern Nations, Nationalities, and Peoples</option>
+                <option value="tigray">Tigray</option>
+            </select>
+        </label>
+            
+            <label for="city">City*<br>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+        </label>
+
+        <label for="subcity">Subcity* <br>
+            <input type="text" id="subcity" name="subcity" placeholder="Enter your subcity" required>
+        </label>
+
+        <label for="woreda">Woreda* <br>
+            <input type="text" id="woreda" name="woreda" placeholder="Enter your woreda" required>
+        </label> 
+
+            <label for="kebele">Kebele <br>
+            <input type="text" id="kebele" name="kebele" placeholder="Enter your kebele" required>
+            </label>
+            <label for="house_no">House Number* <br>
+                <input type="text" id="house_no" name="house_no" placeholder="Enter your house number" required>
+            </label>
+            
+            
+
+            <label for="id_no">Enter Your ID Number* <br>
+            <input type="text" id="id_no" name="id_no" placeholder="Enter your ID number" required pattern="[0-9]{6,10}" title="ID number must be between 6 to 10 digits.">
+        </label>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</main>
+
+</div>
+
+
+
+
+   <footer>
+    <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
+    
+        </footer>
+        
+
+
+</body>
+</html>
