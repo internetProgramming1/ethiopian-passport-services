@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Type</title>
+</head>
+<body>
+    <header>
+        <nav class="logo">
+            <h3>
+                <img src="Images/passport-1.webp" style="width: 550px; height:100px" alt="logo">
+            </h3>
+            <ul class="otherUl">
+                <li><a href="#">evisa</a></li>
+                <li><a href="#">ENS</a></li>
+            </ul>
+
+        </nav>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="Passport-App.html">Appointment</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Add Tracking Information</h1>
+        <form action="display-progress.html" method="GET">
+            <label for="tracking-id">Tracking ID:</label><br>
+            <input type="text" id="tracking-id" name="tracking-id" required><br><br>
+            
+            <label for="applicant-name">Applicant Name:</label><br>
+            <input type="text" id="applicant-name" name="applicant-name" required><br><br>
+            
+            <label for="passport-status">Status:</label><br>
+            <select id="passport-status" name="passport-status" required>
+                <option value="processing">Processing</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+     <footer>
+    <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
+    
+        </footer>
+        
+
+
+</body>
+</html>
