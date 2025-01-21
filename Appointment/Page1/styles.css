@@ -6,6 +6,7 @@ body{
     font-family: Arial, sans-serif;
     background-color: #eaf4f9;
     color: #333;
+    overflow-x: hidden;
 }
 
 /*For Header */
@@ -74,6 +75,7 @@ header{
 
 
 .main3{
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -97,9 +99,6 @@ header{
     cursor: pointer;
 }
 
-
-
-
 /*for the footer*/
 footer{
     height: 100px;
@@ -116,9 +115,20 @@ footer p{
     
 }
 
-@media screen and(max-width:897px) {
-    header{
+/* Media query fixed */
+/* Media query for small screens */
+@media screen and (max-width: 897px) {
+    header {
         display: block;
     }
-    
+    .navigation{
+       justify-content: center;
+       gap: 5px;
+    }
+
+    .logo{
+        justify-content: center;
+    }
+   
 }
+
