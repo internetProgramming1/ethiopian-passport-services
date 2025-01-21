@@ -211,6 +211,10 @@ body {
     padding: 3rem 2rem;
     text-align: center;
 }
+.pdf-download {
+  padding: 3rem 2rem;
+  text-align: center;
+}
 
 .content h2 {
     margin-bottom: 1rem;
