@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Date and Time</title>
+</head>
+<body>
+  <header>
+    <nav class="logo">
+        <h3>
+            <img src="Images/passport-1.webp" style="width: 550px; height:100px" alt="logo">
+        </h3>
+        <ul class="otherUl">
+            <li><a href="#">evisa</a></li>
+            <li><a href="#">ENS</a></li>
+        </ul>
+
+    </nav>
+    <nav class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="Passport-App.html">Appointment</a></li>
+            <li><a href="#">Status</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </nav>
+</header>
+
+   <div class="maincont">
+    <aside>
+        <ul style="padding: 50px 0;"> 
+            <a href="/AppUrgent/page1/Page3/type.html"><li>Urgent Appointment</li></a>
+            <a href="/AppUrgent/page1/daytype.html"><li >Urgency Type</li></a>
+            <a href="/AppUrgent/page1/Page2/Site-select.html" ><li>Site Selection</li></a>
+            <a href="DateTime.html" ><li style="background-color: #005f99; color: #eaf4f9;">Date and time</li></a>
+            <a href="/AppUrgent/Page5/personalInfo.html"><li>Personal information</li></a>
+            <a href="/AppUrgent/Page6/payment.html"><li>Payement</li></a>
+        </ul>
+
+    </aside>
+
+<main>
+ <div class="maincont">
+ <div class="containerForm">    
+    <form action="#" method="post">
+        <!-- Date Selection -->
+        <label for="date">Select Date*</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <!-- Time Selection -->
+
+        <label for="time">Select Time*</label>
+        <select id="time" name="time" required>
+            <option value="" disabled selected>Select time</option>
+        
+            <!-- Morning Time  -->
+            <optgroup label="Morning">
+                <option value="08:00AM-09:00AM">08:00AM-09:00AM</option>
+                <option value="09:00AM-10:00AM">09:00AM-10:00AM</option>
+                <option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
+                <option value="11:00AM-12:00PM">11:00AM-12:00PM</option>
+            </optgroup>
+        
+            <!-- Afternoon Time -->
+            <optgroup label="Afternoon">
+                <option value="02:00PM-03:00PM">02:00PM-03:00PM</option>
+                <option value="03:00PM-04:00PM">03:00PM-04:00PM</option>
+                <option value="04:00PM-05:00PM">04:00PM-05:00PM</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+    </form>
+</div>
+
+
+<Div class="side-note">
+    <div class="note">
+        <h4 >Appointment Date and Time: </h4>
+        <p>Working Days Monday-Friday from
+            8:00am-5:00pm Eastern Time (ET).
+    </p></div>
+
+    <div class="priview">
+        <h4>Selected Time and Date</h4>
+    </div>
+
+    <button type="submit"><a style="color: black;" href="/AppUrgent/Page5/personalInfo.html">Next</a></button>
+</Div>
+ </div>
+</main>
+
+</div>
+
+
+
+
+   <footer>
+    <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
+    
+        </footer>
+        
+
+
+</body>
+</html>
