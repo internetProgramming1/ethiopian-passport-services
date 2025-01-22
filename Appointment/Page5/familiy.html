@@ -103,15 +103,48 @@
 
 </div>
 
-
-
-
-
    <footer>
 
     <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
     
         </footer>
+
+        <script>
+            // Function to save form data to localStorage
+            function saveToLocalStorage() {
+                const mother_first_name = document.getElementById("mother_first_name").value;
+                const mother_father_name = document.getElementById("mother_father_name").value;
+                const mother_grandfather_name = document.getElementById("mother_grandfather_name").value;
+        
+                const father_first_name = document.getElementById("father_first_name").value;
+                const father_father_name = document.getElementById("father_father_name").value;
+                const father_grandfather_name = document.getElementById("father_grandfather_name").value;
+        
+                const spouse_first_name = document.getElementById("spouse_first_name").value;
+                const spouse_father_name = document.getElementById("spouse_father_name").value;
+                const spouse_grandfather_name = document.getElementById("spouse_grandfather_name").value;
+        
+                // Save to localStorage
+                localStorage.setItem("mother_first_name", mother_first_name);
+                localStorage.setItem("mother_father_name", mother_father_name);
+                localStorage.setItem("mother_grandfather_name", mother_grandfather_name);
+        
+                localStorage.setItem("father_first_name", father_first_name);
+                localStorage.setItem("father_father_name", father_father_name);
+                localStorage.setItem("father_grandfather_name", father_grandfather_name);
+        
+                localStorage.setItem("spouse_first_name", spouse_first_name);
+                localStorage.setItem("spouse_father_name", spouse_father_name);
+                localStorage.setItem("spouse_grandfather_name", spouse_grandfather_name);
+            }
+        
+            // Add event listener for form submission
+            document.getElementById("familyForm").addEventListener("submit", function(event) {
+                event.preventDefault();  // Prevent form from submitting normally
+                saveToLocalStorage();    // Save data to localStorage
+                window.location.href = "attachment.html";  // Redirect to attachment page
+            });
+        </script>
         
 </body>
 </html>

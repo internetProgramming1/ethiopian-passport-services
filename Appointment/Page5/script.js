@@ -33,4 +33,19 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("kebele").textContent = localStorage.getItem("kebele") || "Not provided";
     document.getElementById("house_no").textContent = localStorage.getItem("house_no") || "Not provided";
     document.getElementById("id_no").textContent = localStorage.getItem("id_no") || "Not provided";
+
+
+document.getElementById("mother_first_name").textContent = localStorage.getItem("mother_first_name") || "Not provided";
+document.getElementById("mother_father_name").textContent = localStorage.getItem("mother_father_name") || "Not provided";
+document.getElementById("mother_grandfather_name").textContent = localStorage.getItem("mother_grandfather_name") || "Not provided";
+
+// Father Section
+document.getElementById("father_first_name").textContent = localStorage.getItem("father_first_name") || "Not provided";
+document.getElementById("father_father_name").textContent = localStorage.getItem("father_father_name") || "Not provided";
+document.getElementById("father_grandfather_name").textContent = localStorage.getItem("father_grandfather_name") || "Not provided";
+
+// Spouse Section
+document.getElementById("spouse_first_name").textContent = localStorage.getItem("spouse_first_name") || "Not provided";
+document.getElementById("spouse_father_name").textContent = localStorage.getItem("spouse_father_name") || "Not provided";
+document.getElementById("spouse_grandfather_name").textContent = localStorage.getItem("spouse_grandfather_name") || "Not provided";
 });
