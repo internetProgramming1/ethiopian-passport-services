@@ -16,6 +16,7 @@ header{
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  background-color:#fff; 
 }
 .logo{
   display: flex;
@@ -323,7 +324,7 @@ body {
   gap: 2rem;
   padding: 2rem;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .feature-card {
@@ -360,7 +361,10 @@ body {
   width: 60px;
   margin-bottom: 1rem;
 }
-
+.About-us
+{
+  text-align: center;
+}
 .image
 {
 height:18.9px;
