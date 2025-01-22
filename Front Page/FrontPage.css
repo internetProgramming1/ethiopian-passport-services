@@ -275,6 +275,10 @@ body {
   text-decoration: none;
  color:  #212529;
 }
+.card a:hover{
+  text-decoration:underline;
+
+}
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
