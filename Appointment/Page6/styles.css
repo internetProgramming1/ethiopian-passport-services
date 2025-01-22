@@ -89,80 +89,6 @@ main{
 }
 
 
-
-.containerForm ,.side-note{
-    margin-left: 5%;
-    width: 50%;
-    position: relative;
-}
-
-.note{
-    width: 70%;
-    margin: auto;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
-.priview{
-    width: 70%;
-    margin:30px auto;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 100px;
-
-}
-
-
-label {
-    font-size: 16px;
-    margin-bottom: 5px;
-    display: block;
-    color: #333;
-}
-
-
-input[type="date"] {
-    height: 45px;
-    margin: 5px;
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f4f4f4;
-    color: #333;
-}
-select {
-    height: 45px;
-    margin: 5px;
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Add hover effect for the inputs */
-input[type="date"]:hover,
-select:hover {
-    border-color: #005f99;
-}
-
-/* Add focus effect for the inputs */
-input[type="date"]:focus,
-select:focus {
-    border-color: #005f99;
-    outline: none;
-}
-
 button{
     margin-top: 15px;
     position: absolute;
@@ -180,11 +106,9 @@ button{
   
 }
 .image{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
 }
 .image div{
     margin-bottom: 20px;
