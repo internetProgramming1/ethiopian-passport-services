@@ -106,15 +106,15 @@
         
         <script>
             // Save the selected date and time to localStorage when form is submitted
-            document.querySelector('form').addEventListener('submit', function(event) {
-                event.preventDefault();  // Prevent form submission
-    
+            document.getElementById('next').addEventListener('click', function() {
+              
                 const date = document.getElementById('date').value;
                 const time = document.getElementById('time').value;
-    
+                if (!date || !time) {
+                    alert('Please complete fields before proceeding.');
                 // Save the values to localStorage
                 localStorage.setItem('date', date);
-                localStorage.setItem('time', time);
+                localStorage.setItem('time', time);}
     
             });
 

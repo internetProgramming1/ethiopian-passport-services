@@ -5,6 +5,7 @@ document.getElementById("delivery").textContent = localStorage.getItem("delivery
 document.getElementById("date").textContent = localStorage.getItem("date") || "Not provided";
 document.getElementById("time").textContent = localStorage.getItem("time") || "Not provided";
 
+document.getElementById("type").textContent = localStorage.getItem("type") || "Not provided";
 
 
 document.addEventListener("DOMContentLoaded", function() {

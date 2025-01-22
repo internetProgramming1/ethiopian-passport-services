@@ -99,7 +99,8 @@
             <label for="id_no">Enter Your ID Number* <br>
             <input type="text" id="id_no" name="id_no" placeholder="Enter your ID number" required pattern="[0-9]{6,10}" title="ID number must be between 6 to 10 digits.">
         </label>
-            <button type="submit">Next</button>
+        <button type="submit"><a style="color: black;" href="familiy.html">Next</a></button>
+        
         </form>
     </div>
 </main>
@@ -113,7 +114,33 @@
     <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
     
         </footer>
+   
+        <script>
+            function saveToLocalStorage() {
+            const region = document.getElementById("region").value;
+            const city = document.getElementById("city").value;
+            const subcity = document.getElementById("subcity").value;
+            const woreda = document.getElementById("woreda").value;
+            const kebele = document.getElementById("kebele").value;
+            const house_no = document.getElementById("house_no").value;
+            const id_no = document.getElementById("id_no").value;
         
+            localStorage.setItem("region", region);
+            localStorage.setItem("city", city);
+            localStorage.setItem("subcity", subcity);
+            localStorage.setItem("woreda", woreda);
+            localStorage.setItem("kebele", kebele);
+            localStorage.setItem("house_no", house_no);
+            localStorage.setItem("id_no", id_no);
+        }
+        
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            saveToLocalStorage();
+            window.location.href = "summary.html"; // Navigate to the summary page
+        });
+        
+        </script>
 
 
 </body>
