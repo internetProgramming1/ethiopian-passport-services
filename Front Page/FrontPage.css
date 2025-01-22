@@ -16,6 +16,7 @@ header{
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  background-color:#fff; 
 }
 .logo{
   display: flex;
