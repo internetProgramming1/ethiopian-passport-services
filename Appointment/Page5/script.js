@@ -2,7 +2,6 @@ document.getElementById("site").textContent = localStorage.getItem("site") || "N
 document.getElementById("city").textContent = localStorage.getItem("city") || "Not provided";
 document.getElementById("office").textContent = localStorage.getItem("office") || "Not provided";
 document.getElementById("delivery").textContent = localStorage.getItem("delivery") || "Not provided";
-<br></br>
 document.getElementById("date").textContent = localStorage.getItem("date") || "Not provided";
 document.getElementById("time").textContent = localStorage.getItem("time") || "Not provided";
 

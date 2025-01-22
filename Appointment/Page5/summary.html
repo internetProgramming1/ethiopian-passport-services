@@ -50,6 +50,7 @@
     </div>
 
     <div class="container">
+        <h2>Family Name</h2>
         <h3>Mother</h3>
         <p>First Name: <span id="mother_first_name"></span></p>
         <p>Father's Name: <span id="mother_father_name"></span></p>
@@ -65,12 +66,45 @@
         <p>Father's Name: <span id="spouse_father_name"></span></p>
         <p>Grandfather's Name: <span id="spouse_grandfather_name"></span></p>
     </div>
-    
+   </div>
+   <div class="terms">
+    <p>Request Type: <b>New</b></p>
+    <P>Requested Status: <b>Requested</b></P>
+    <p>Passport Page Number: <b>32</b></p>
+    <p>Request Date: <b> <span id="Rdate"></span></b></p>
+    <p>Application Number: <b> <span id="appno"></span></b></p>
+    <br><br>
+    <hr>
+    <br><br>
+    <P><b>Please make sure these details exactly match the identity document.</b></P>
+    <br>
+<label for="Check">
+    <input required type="checkbox" name="Check" id="Check"> Confirm Applicant Details.
+</label>
    </div>
    <div class="btn">
-    <button>Privious</button>
-    <button>Next</button>
+    <button><a href="personalInfo.html" style="text-decoration: none; color: aliceblue;">Privious</a></button>
+    <button><a href="/Appointment/Page6/payment.html" style="text-decoration: none; color: aliceblue;">Next</a></button>
 </div>
    <script src="script.js"></script>
+   <script>
+    let date = new Date();
+
+let day = date.getDate(); 
+let month = date.getMonth() + 1; 
+let year = date.getFullYear(); 
+
+// Combine into a string
+let formattedDate = `${day}/${month}/${year}`;
+document.getElementById("Rdate").innerHTML = formattedDate;
+let appno="PNA"
+for(let i=0;i<10;i++){
+    rand=Math.random()*10;
+    round=Math.round(rand);
+    appno=appno+round;
+}
+document.getElementById("appno").innerHTML=appno;
+</script>
+
 </body>
 </html>
