@@ -3,96 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styleP.css">
-    <link rel="stylesheet" href="navstyle.css">
-    <title>Attachments</title>
+    <title>Personal Information Form</title>
+    <link rel="stylesheet" href="styleSu.css">
 </head>
 <body>
-  <header>
-    <nav class="logo">
-        <h3>
-            <img src="Images/passport-1.webp" style="width: 550px; height:100px" alt="logo">
-        </h3>
-        <ul class="otherUl">
-            <li><a href="#">evisa</a></li>
-            <li><a href="#">ENS</a></li>
-        </ul>
+    <h1>Summary</h1>
+    <div class="main">
+      
+        <div class="container">
+            <h3>Site Selection</h3>
+            <p>Site: <span id="site"></span></p>
+            <p>City: <span id="city"></span></p>
+            <p>Office: <span id="office"></span></p>
+            <p>Delivery site: <span id="delivery"></span></p>
 
-    </nav>
-    <nav class="navigation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="Passport-App.html">Appointment</a></li>
-            <li><a href="#">Status</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQs</a></li>
-        </ul>
-    </nav>
-</header>
-
-   <div class="maincont">
-    <aside>
-        <ul style="padding: 50px 0;"> 
-           <a href="/Appointment/Page3/type.html"><li>Request Appointment</li></a>
-           <a href="Site-select.html"><li>Site Selection</li></a>
-            <a href="#"><li>Date and time</li></a>
-            <a href="#"><li  style="background-color: #005f99; color: #eaf4f9;">Personal information</li></a>
-            <a href="#"><li>Payement</li></a>
-           
-        </ul>
-
-    </aside>
-
-<main>
-    <nav>
-        <ul class="nav-links">
-           <span style="background-color: #005f99; padding: 7px; border-radius: 5px; color: #f9f3ea;"> <li ><a href="personalInfo.html">Personal Info.</a></li></span>
-            <li class="center"><a href="address.html">Address</a></li>
-            <li class="upward"><a href="familiy.html">Family</a></li>
-            <li class="forward"><a href="attachment.html">Attachments</a></li>
-           <li> <a href="summary.html">Summary</a></li> 
-
-        </ul>
-
-
-        <div class="summary-container">
-            <h2>Summary of Your Input</h2>
-            <ul class="summary-list" id="summary-list">
-                <!-- Date and Time will be displayed here -->
-            </ul>
+            <h3>Date and Time</h3>
+            <p>Date: <span id="date"></span></p>
+            <p>Time: <span id="time"></span></p>
         </div>
-        
+       <div class="container">
+        <h3>Personal Information</h3>
+        <p>First Name: <span id="firstname"></span></p>
+        <p>Middle Name: <span id="middlename"></span></p>
+        <p>Last Name: <span id="lastname"></span></p>
+        <p>Phone: <span id="phone"></span></p>
+        <p>Email: <span id="email"></span></p>
+        <p>Gender: <span id="gender"></span></p>
+        <p>Date of Birth: <span id="dob"></span></p>
+        <p>Under 18: <span id="under18"></span></p>
+        <p>Birthplace: <span id="birthplace"></span></p>
+        <p>Adopted: <span id="adopted"></span></p>
+        <p>Birth Certificate ID: <span id="birth_certificate"></span></p>
+        <p>Nationality: <span id="nationality"></span></p>
+        <p>Marital Status: <span id="marital_status"></span></p>
+        <p>Occupation: <span id="occupation"></span></p>
+    </div>
+    <div class="container">
+        <h3>Address</h3>
+        <p>Region: <span id="region"></span></p>
+        <p>City: <span id="city"></span></p>
+        <p>Subcity: <span id="subcity"></span></p>
+        <p>Woreda: <span id="woreda"></span></p>
+        <p>Kebele: <span id="kebele"></span></p>
+        <p>House Number: <span id="house_no"></span></p>
+        <p>ID Number: <span id="id_no"></span></p>
+    </div>
+    <div class="container">
 
-   
-</main>
-
-</div>
-
-
-   <footer>
-    <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>  
-        </footer>
-        <script>
-            // Retrieve individual key-value pairs from localStorage
-            const selectedDate = localStorage.getItem("selectedDate");
-            const selectedTime = localStorage.getItem("selectedTime");
+    </div>
     
-            // Get the summary list container
-            const summaryList = document.getElementById("summary-list");
-    
-            // Display the data if available, otherwise show a fallback message
-            if (selectedDate || selectedTime) {
-                summaryList.innerHTML = `
-                    <li><span>Date:</span> ${selectedDate ? selectedDate : "Not Provided"}</li>
-                    <li><span>Time Slot:</span> ${selectedTime ? selectedTime : "Not Provided"}</li>
-                `;
-            } else {
-                summaryList.innerHTML = `
-                    <li>No date and time information available.</li>
-                `;
-            }
-        </script>
+   </div>
+   <script src="script.js"></script>
 </body>
 </html>

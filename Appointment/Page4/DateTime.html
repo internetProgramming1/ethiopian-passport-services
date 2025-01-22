@@ -98,7 +98,23 @@
     <p>&copy; 2024 Copyright: Immigration And Citizenship Service</p>
     
         </footer>
-        
+        <script>
+            // Save the selected date and time to localStorage when form is submitted
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();  // Prevent form submission
+    
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+    
+                // Save the values to localStorage
+                localStorage.setItem('date', date);
+                localStorage.setItem('time', time);
+    
+                // Redirect to the summary page
+                window.location.href = "summary.html";
+            });
+
+          </script>
 
 
 </body>

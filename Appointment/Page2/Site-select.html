@@ -119,18 +119,15 @@
 </script>
 
    <script>
-    document.getElementById('next').addEventListener('click', () => {
+
+  function saveSiteSelection(event) {
+    event.preventDefault();
         // Capture form data
         const site = document.getElementById('site').value;
         const city = document.getElementById('city').value;
         const office = document.getElementById('office').value;
         const delivery = document.getElementById('delivery').value;
 
-        // Validate inputs
-        if (!site || !city || !office || !delivery) {
-            alert('Please complete all fields before proceeding.');
-            return;
-        }
 
         // Store data in localStorage
         localStorage.setItem('site', site);
@@ -140,7 +137,7 @@
 
         // Navigate to next page
         window.location.href = '\page4';
-    });
+    };
 </script>
 
    <footer>

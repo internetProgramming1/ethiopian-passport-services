@@ -137,35 +137,44 @@
         </footer>
 
         <script>
-            document.getElementById("personalInfoForm").addEventListener("submit", function (event) {
-                event.preventDefault(); // Prevent form submission
-    
-                // Collect data from the form
-                const data = {
-                    firstname: document.getElementById("firstname").value,
-                    middlename: document.getElementById("middlename").value,
-                    lastname: document.getElementById("lastname").value,
-                    phone: document.getElementById("phone").value,
-                    email: document.getElementById("email").value,
-                    gender: document.querySelector('input[name="gender"]:checked').value,
-                    dob: document.getElementById("dob").value,
-                    under18: document.querySelector('input[name="under18"]:checked').value,
-                    birthplace: document.getElementById("birthplace").value,
-                    adopted: document.querySelector('input[name="adopted"]:checked').value,
-                    birthCertificate: document.getElementById("birth_certificate").value,
-                    nationality: document.getElementById("nationality").value,
-                    maritalStatus: document.getElementById("marital-status").value,
-                    occupation: document.getElementById("occupation").value || "Not specified",
-                };
-    
-                // Save the data in localStorage
-                for (const [key, value] of Object.entries(data)) {
-                    localStorage.setItem(key, value);
-                }
-    
-                // Redirect to the summary page
-                window.location.href = "summary.html";
-            });
+         function saveToLocalStorage() {
+    const firstname = document.getElementById("firstname").value;
+    const middlename = document.getElementById("middlename").value;
+    const lastname = document.getElementById("lastname").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value;
+    const dob = document.getElementById("dob").value;
+    const under18 = document.querySelector('input[name="under18"]:checked')?.value;
+    const birthplace = document.getElementById("birthplace").value;
+    const adopted = document.querySelector('input[name="adopted"]:checked')?.value;
+    const birth_certificate = document.getElementById("birth_certificate").value;
+    const nationality = document.getElementById("nationality").value;
+    const marital_status = document.getElementById("marital-status").value;
+    const occupation = document.getElementById("occupation").value;
+
+    localStorage.setItem("firstname", firstname);
+    localStorage.setItem("middlename", middlename);
+    localStorage.setItem("lastname", lastname);
+    localStorage.setItem("phone", phone);
+    localStorage.setItem("email", email);
+    localStorage.setItem("gender", gender);
+    localStorage.setItem("dob", dob);
+    localStorage.setItem("under18", under18);
+    localStorage.setItem("birthplace", birthplace);
+    localStorage.setItem("adopted", adopted);
+    localStorage.setItem("birth_certificate", birth_certificate);
+    localStorage.setItem("nationality", nationality);
+    localStorage.setItem("marital_status", marital_status);
+    localStorage.setItem("occupation", occupation);
+}
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    saveToLocalStorage();
+    window.location.href = "summary.html"; // Navigate to the summary page
+});
+
         </script>
 </body>
 </html>
