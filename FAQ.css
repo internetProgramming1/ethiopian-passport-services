@@ -3,36 +3,7 @@ body {
     background-color: #e9ecef; 
     margin: 0;
     padding: 40px;
-}
-/*For Header */
-header{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-     background-color:#fff; 
-  }
-  .logo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    margin: 20px 50px;
-  }
-  .navigation{
-    background-color: #005f99;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    margin-bottom: 0px;
-  }
-  .navigation ul, .logo ul{
-    display: flex;
-    list-style: none;
-    gap: 90px;
-    font-size: larger;
+}ize: larger;
     font-weight: bolder;
   }
   .navigation ul li a,.main3 a{
